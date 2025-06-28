@@ -37,5 +37,6 @@ app.use('/', (req,res)=>{
 const PORT = 5000;
 
 app.listen(PORT, () => {
+  console.log(process.env.GOOGLE_SEARCH_KEY)
   console.log(`Server running on port ${PORT}`);
 });
