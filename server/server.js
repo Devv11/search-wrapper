@@ -29,7 +29,9 @@ app.use((err, req, res, next) => {
     message: ""
   });
 });
-
+app.use('/', (req,res)=>{
+    return res.json({message:"root dir"})
+});
 
 
 const PORT = 5000;
