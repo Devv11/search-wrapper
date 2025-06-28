@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
+import SearchHistory from './components/SearchHistory';
+import { useSearch } from './hooks/useSearch';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { loading, results, searchInfo, error, performSearch, clearResults } = useSearch();
+
+  const handleSearch = (query) => {
+    performSearch(query);
+  };
+
+  const handleSelectFromHistory = (query) => {
+    performSearch(query);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <header className="app-header">
+        <h1>Search Wrapper</h1>
+      </header>
+
+      <main className="app-main">
+        <SearchBar onSearch={handleSearch} loading={loading} />
+        <SearchHistory onSelectQuery={handleSelectFromHistory} />
+        <SearchResults 
+          results={results} 
+          searchInfo={searchInfo} 
+          loading={loading} 
+          error={error} 
+        />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
