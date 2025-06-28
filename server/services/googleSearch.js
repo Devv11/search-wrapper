@@ -1,8 +1,9 @@
 const axios = require('axios');
+require('dotenv').config();
 
 class GoogleSearchService {
   constructor() {
-    this.apiKey = process.env.GOOGLE_API_KEY;
+    this.apiKey = process.env.GOOGLE_SEARCH_KEY;
     this.cx = process.env.GOOGLE_CX;
     this.baseUrl = 'https://www.googleapis.com/customsearch/v1';
   }
