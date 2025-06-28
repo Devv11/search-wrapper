@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-//require('dotenv').config();
+require('dotenv').config();
 
 const connectDB = require('./config/database');
 const searchRoutes = require('./routes/search');
@@ -18,8 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-// app.use('/api', searchRoutes);
-// app.use('/api', historyRoutes);
+app.use('/api', searchRoutes);
+app.use('/api', historyRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -30,10 +30,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
+
 
 const PORT = 5000;
 
