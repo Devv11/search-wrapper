@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const serpapi = require('serpapi');
 
 const connectDB = require('./config/database');
 const searchRoutes = require('./routes/search');
@@ -16,6 +17,8 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
 
 // Routes
 app.use('/api', searchRoutes);

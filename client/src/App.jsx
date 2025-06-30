@@ -4,11 +4,12 @@ import HeaderComponent from "./components/HeaderComponent"
 import PaginationComponent from "./components/PaginationComponent"
 import SearchResultsDisplay from "./components/SearchResultsDisplay"
 import SidebarFiltersComponent from "./components/SideBarFiltersComponent"
+import { useSearch } from "./hooks/useSearch";
 
 export default function SearchWrapper() {
   const [searchQuery, setSearchQuery] = useState("")
   const [viewMode, setViewMode] = useState("list")
-  const [isLoading, setIsLoading] = useState(false)
+  //const [isLoading, setIsLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [filters, setFilters] = useState({
     searchEngine: "all",
@@ -22,6 +23,8 @@ export default function SearchWrapper() {
       "Academic": false
     }
   })
+
+  const { loading, results, searchInfo, error, performSearch } = useSearch();
 
   // Mock search results (kept outside for clarity, could be dynamic based on search/filters)
   const allSearchResults = [
@@ -101,14 +104,19 @@ export default function SearchWrapper() {
   );
 
   const handleSearch = () => {
-    setIsLoading(true)
-    setCurrentPage(1) // Reset to first page on new search
-    setTimeout(() => {
-      setIsLoading(false)
-      // In a real app, this is where you'd fetch data based on searchQuery and filters
-      // setSearchResults(fetchedData);
-    }, 1000)
-  }
+    setCurrentPage(1); // Reset to first page on new search
+    if (searchQuery.trim()) { // Only search if there's a query
+      performSearch(searchQuery); // Call the search function from your hook
+    }
+  };
+
+  const itemsPerPage = 3;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Use the actual `results` from the useSearch hook for display
+  const currentResults = results.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(results.length / itemsPerPage);
 
   const handleFilterChange = (filterType, value) => {
     setFilters(prev => ({
@@ -129,13 +137,6 @@ export default function SearchWrapper() {
     setCurrentPage(1) // Reset to first page on filter change
   }
 
-  // Define how many items per page (for a real pagination scenario)
-  const itemsPerPage = 3;
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentResults = filteredSearchResults.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(filteredSearchResults.length / itemsPerPage);
-
 
   return (
     <div className="search-wrapper">
@@ -145,7 +146,7 @@ export default function SearchWrapper() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         handleSearch={handleSearch}
-        isLoading={isLoading}
+        isLoading={loading}
       />
 
       <div className="main-content">
@@ -160,7 +161,7 @@ export default function SearchWrapper() {
         <SearchResultsDisplay
           viewMode={viewMode}
           setViewMode={setViewMode}
-          isLoading={isLoading}
+          isLoading={loading}
           searchResults={currentResults} // Pass paginated results
         />
 
