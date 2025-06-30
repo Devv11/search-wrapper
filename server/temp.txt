@@ -1,0 +1,341 @@
+{
+    "search_metadata": {
+        "id": "6862803c05bb593e4399f561",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/6536b20f89405890/6862803c05bb593e4399f561.json",
+        "created_at": "2025-06-30 12:17:00 UTC",
+        "processed_at": "2025-06-30 12:17:00 UTC",
+        "google_url": "https://www.google.com/search?q=Fresh+Bagels&oq=Fresh+Bagels&uule=w+CAIQICIqU2VhdHRsZS1UYWNvbWEsV0EsV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz&hl=en&gl=us&num=10&safe=active&start=10&sourceid=chrome&ie=UTF-8",
+        "raw_html_file": "https://serpapi.com/searches/6536b20f89405890/6862803c05bb593e4399f561.html",
+        "total_time_taken": 6.15
+    },
+    "search_parameters": {
+        "engine": "google",
+        "q": "Fresh Bagels",
+        "location_requested": "Seattle-Tacoma, WA, Washington, United States",
+        "location_used": "Seattle-Tacoma,WA,Washington,United States",
+        "google_domain": "google.com",
+        "hl": "en",
+        "gl": "us",
+        "safe": "active",
+        "start": 10,
+        "num": "10",
+        "device": "desktop"
+    },
+    "search_information": {
+        "query_displayed": "Fresh Bagels",
+        "total_results": 40900000,
+        "page_number": 2,
+        "time_taken_displayed": 0.31,
+        "organic_results_state": "Results for exact spelling"
+    },
+    "organic_results": [
+        {
+            "position": 1,
+            "title": "New York Bagels - Hand Rolled, Free 2-day Shipping - NYC",
+            "link": "https://www.newyorkerbagels.com/?srsltid=AfmBOor9wGR86l99gTodPgeOiEZaoif6H3i0YjZlaUyg0OgTd_zh4Fhb",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.newyorkerbagels.com/%3Fsrsltid%3DAfmBOor9wGR86l99gTodPgeOiEZaoif6H3i0YjZlaUyg0OgTd_zh4Fhb&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIHhAB",
+            "displayed_link": "https://www.newyorkerbagels.com",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31a4e21669e17ceaa30a642fe0c6a4dbf1.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31f5e0eb9ef5814d1860d8d177df26bd11.png",
+            "snippet": "World's largest baker of New York City bagels, hand-rolled and shipped fresh. Kosher certified + FREE 2-day shipping.",
+            "snippet_highlighted_words": [
+                "World's largest baker of New York City bagels"
+            ],
+            "rich_snippet": {
+                "bottom": {
+                    "extensions": [
+                        "Free delivery"
+                    ]
+                }
+            },
+            "source": "New Yorker Bagels"
+        },
+        {
+            "position": 2,
+            "title": "Homemade Bagels Recipe",
+            "link": "https://sallysbakingaddiction.com/homemade-bagels/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://sallysbakingaddiction.com/homemade-bagels/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIHxAB",
+            "displayed_link": "https://sallysbakingaddiction.com › Recipes › Bread",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31575e857422e18cfc037ac529d7461f99.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd315baaf5d762a960fde86914cd386d5eb1.png",
+            "date": "Jan 1, 2019",
+            "snippet": "This easy homemade bagels recipe proves that you can make deliciously chewy bagels in your own kitchen with only a few basic ingredients and baking tools!",
+            "snippet_highlighted_words": [
+                "easy homemade bagels recipe"
+            ],
+            "rich_snippet": {
+                "top": {
+                    "detected_extensions": {
+                        "rating": 4.9,
+                        "reviews": 695,
+                        "hr": 3
+                    },
+                    "extensions": [
+                        "4.9(695)",
+                        "3 hr"
+                    ]
+                }
+            },
+            "source": "Sally's Baking Addiction"
+        },
+        {
+            "position": 3,
+            "title": "Hey Bagel",
+            "link": "https://www.heybagel.net/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.heybagel.net/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIExAB",
+            "displayed_link": "https://www.heybagel.net",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31a7b39106da701aae03c47dbda8efb5a2.png",
+            "snippet": "Hey Bagel is the place to get hot fresh crackly bagels from the founder of Rubinstein Bagels. THESE are the bagels you've been looking for.",
+            "snippet_highlighted_words": [
+                "hot fresh crackly bagels"
+            ],
+            "source": "heybagel.net"
+        },
+        {
+            "position": 4,
+            "title": "Best bagels? : r/SeattleWA",
+            "link": "https://www.reddit.com/r/SeattleWA/comments/imi7x0/best_bagels/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.reddit.com/r/SeattleWA/comments/imi7x0/best_bagels/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIFBAB",
+            "displayed_link": "20+ comments · 4 years ago",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd312497a1cc01effde9813a220597f4d863.png",
+            "snippet": "Rubinstein are hands down the best bagels in the entire PNW. I've come to accept that the PNW, while having some insanely amazing chefs & food scenes, is the ...",
+            "snippet_highlighted_words": [
+                "Rubinstein are hands down the best bagels in the entire PNW"
+            ],
+            "source": "Reddit · r/SeattleWA"
+        },
+        {
+            "position": 5,
+            "title": "mt. bagel seattle bagels",
+            "link": "https://www.mtbagel.com/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.mtbagel.com/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIDhAB",
+            "displayed_link": "https://www.mtbagel.com",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd319bb25f8e838a56b9c488be85795c2fb0.png",
+            "snippet": "801 26th ave E. Walk-ins welcome: Tue - Sat // 9-2 // CARDS ONLY. Preorder window: Monday 9am - Saturday 11:59pm (All orders are for the NEXT WEEK).",
+            "snippet_highlighted_words": [
+                "801 26th ave E"
+            ],
+            "source": "Mt. Bagel"
+        },
+        {
+            "position": 6,
+            "title": "Seattle's most popular bagel shop: Hey Bagel! | Local Lens ...",
+            "link": "https://www.youtube.com/watch?v=NtqvkfeYYD8",
+            "displayed_link": "630+ views · 2 months ago",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31b035be60bb2a09c7b5404ee19daed68e.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd317cf26d39ba1fc3b32b1fbaa227f3c423.png",
+            "snippet": "... Bagel bakes fresh throughout the day. Never toasted. Never sandwiched. Just hot fresh bagels with schmear to tear and share. Right now its ...",
+            "duration": "3:05",
+            "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRCHoBxOojK-INQQ5KlG-astwqLFxVYYm9vvg",
+            "source": "YouTube · Local Lens Seattle"
+        },
+        {
+            "position": 7,
+            "title": "THE BEST Bagels in Seattle (Updated June 2025)",
+            "link": "https://www.tripadvisor.com/Restaurants-g60878-zfd10740-Seattle_Washington-Bagels.html",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.tripadvisor.com/Restaurants-g60878-zfd10740-Seattle_Washington-Bagels.html&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIGRAB",
+            "displayed_link": "https://www.tripadvisor.com › ... › Seattle Restaurants",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31e63ac4df81e2b2f44aab57ef30e37ba1.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd3105a7c81cd3dd98ea8a528abf3e9e2cf1.png",
+            "snippet": "Best Bagels in Seattle, Washington: Find 2519 Tripadvisor traveller reviews of THE BEST Bagels and search by price, location, and more.",
+            "snippet_highlighted_words": [
+                "Best Bagels in Seattle, Washington"
+            ],
+            "source": "Tripadvisor"
+        },
+        {
+            "position": 8,
+            "title": "Bagels Only - Einstein's Catering | ebcatering.com",
+            "link": "https://ebcatering.com/index.cfm?fuseaction=order&action=menu-category&category-id=117&group-id=380",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ebcatering.com/index.cfm%3Ffuseaction%3Dorder%26action%3Dmenu-category%26category-id%3D117%26group-id%3D380&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIMxAB",
+            "displayed_link": "https://ebcatering.com › ...",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31332ae7f67f670ec1ae8cc54a56ac346e.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31854fcd4a3eccaae1478f4c646aff3c65.png",
+            "snippet": "Fresh baked Classic bagels without the shmear. Calories. $10.39 - $16.99. View ... Fresh baked Gourmet bagels without the shmear. Calories. $14.49 ...",
+            "snippet_highlighted_words": [
+                "Fresh baked Classic bagels without the shmear"
+            ],
+            "source": "Einstein's Catering"
+        },
+        {
+            "position": 9,
+            "title": "Einstein Bros. Bagels: Home",
+            "link": "https://www.einsteinbros.com/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.einsteinbros.com/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIMhAB",
+            "displayed_link": "https://www.einsteinbros.com",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd3111ab30a1cb722069a2c1c84400bf59a0.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31a92eaa63b78f620ea4ba9c18800a58ae.png",
+            "snippet": "Breakfast egg sandwiches and fresh to made bagels on demand! Order online or straight from your phone and let your taste buds celebrate.",
+            "snippet_highlighted_words": [
+                "fresh to made bagels on demand"
+            ],
+            "source": "Einstein Bros. Bagels"
+        },
+        {
+            "position": 10,
+            "title": "Blazing Bagels",
+            "link": "https://www.blazingbagels.com/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.blazingbagels.com/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIRhAB",
+            "displayed_link": "https://www.blazingbagels.com",
+            "thumbnail": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd3195de396fd3b346fd6bea30c5abf93726.jpeg",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31fd419bb0c6f3a2421f0813a7d0768805.png",
+            "snippet": "Blazing Bagels. ORDER · REDMOND · BELLEVUE · ISSAQUAH · BLAKELEY · SODO · CATERING · ABOUT US · LOCATIONS · NUTRITION INFO · CREAM CHEESE · BAGELS. Open Menu ...",
+            "snippet_highlighted_words": [
+                "Blazing Bagels"
+            ],
+            "source": "Blazing Bagels"
+        },
+        {
+            "position": 11,
+            "title": "I just got 6 fresh bagels. How do I make the freshness last?",
+            "link": "https://www.reddit.com/r/longisland/comments/1gl0g05/i_just_got_6_fresh_bagels_how_do_i_make_the/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.reddit.com/r/longisland/comments/1gl0g05/i_just_got_6_fresh_bagels_how_do_i_make_the/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQIOBAB",
+            "displayed_link": "100+ comments · 7 months ago",
+            "favicon": "https://serpapi.com/searches/6862803c05bb593e4399f561/images/43cb5fddef47c29b25bbed968767bd31bf51da4e78f022e7334ee63046132d8f.png",
+            "snippet": "Slice them, put it back together and wrap them in plastic wrap then freeze them. Then pop it into the toaster oven when you want one. That's the best method I' ...",
+            "snippet_highlighted_words": [
+                "Slice them, put it back together and wrap them in plastic wrap then freeze them"
+            ],
+            "source": "Reddit · r/longisland"
+        },
+        {
+            "position": 12,
+            "title": "Woodinville Bagels | Bagel Shop | Woodinville Bakery",
+            "link": "https://woodinvillebagel.com/",
+            "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://woodinvillebagel.com/&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChAWegQINBAB",
+            "displayed_link": "https://woodinvillebagel.com",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDngfIdcvIqDRbWLcnsmMrID-4n0yJLB6nrMujH9dSwLM12JhSFMeAIOk&usqp=CAE&s",
+            "snippet": "Steam-baked Bagels, Coffee, Organic Bagels and more! In-house cream cheese, quiches, and cheesecakes. Coffee from 7 roasters. Bagels done right.",
+            "snippet_highlighted_words": [
+                "Steam-baked Bagels, Coffee, Organic Bagels and more"
+            ],
+            "source": "Woodinville Bagel Bakery"
+        }
+    ],
+    "related_searches": [
+        {
+            "block_position": 1,
+            "items": [
+                {
+                    "name": "Hey Bagel",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREq7bDf7zjbWEHd-5zL5I11RtZpZ_Y4mh0TyHWzi2QVqU3cQnQorij&s=0",
+                    "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Hey+Bagel&stick=H4sIAAAAAAAAAAFbAKT_CDEiDS9nLzExbG1qNWtjZzH6AQCwBACiBQlIZXkgQmFnZWzaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIAfKGVBhbAAAA&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChCz2gEoAHoECDAQCg",
+                    "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Hey+Bagel&safe=active&start=10&stick=H4sIAAAAAAAAAAFbAKT_CDEiDS9nLzExbG1qNWtjZzH6AQCwBACiBQlIZXkgQmFnZWzaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIAfKGVBhbAAAA"
+                },
+                {
+                    "name": "Rachel's Bagels & Burritos (BA...",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIAX5zmpi7FKsyl0e5QMq-wEYadMnCngRNn7FjvuePB8CcXv44pvYR&s=0",
+                    "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=rachel%27s+bagels&stick=H4sIAAAAAAAAAAFgAJ__CDEiDC9nLzFzMDRnc185OPoBALAEAKIFD3JhY2hlbCdzIGJhZ2Vsc9oGGQC7ooj5BEW_MbE5M7GyFuO3B_pH_X1mmKmiCBZQZW9wbGUgYWxzbyBzZWFyY2ggZm9yqAgBRr5Ty2AAAAA&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChCz2gEoAHoECDAQDw",
+                    "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=rachel%27s+bagels&safe=active&start=10&stick=H4sIAAAAAAAAAAFgAJ__CDEiDC9nLzFzMDRnc185OPoBALAEAKIFD3JhY2hlbCdzIGJhZ2Vsc9oGGQC7ooj5BEW_MbE5M7GyFuO3B_pH_X1mmKmiCBZQZW9wbGUgYWxzbyBzZWFyY2ggZm9yqAgBRr5Ty2AAAAA"
+                },
+                {
+                    "name": "Backyard Bagel",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlaE6VC1Gf_OdEaHmnqoLN4AYhPPkI35mKqsdjaSB9ccCe4eSYa0xu&s=0",
+                    "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Backyard+Bagel&stick=H4sIAAAAAAAAAAFgAJ__CDEiDS9nLzExeTY2Z2h2ODb6AQCwBACiBQ5CYWNreWFyZCBCYWdlbNoGGQC7ooj5BEW_MbE5M7GyFuO3B_pH_X1mmKmiCBZQZW9wbGUgYWxzbyBzZWFyY2ggZm9yqAgBlQE8pGAAAAA&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChCz2gEoAHoECDAQFA",
+                    "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Backyard+Bagel&safe=active&start=10&stick=H4sIAAAAAAAAAAFgAJ__CDEiDS9nLzExeTY2Z2h2ODb6AQCwBACiBQ5CYWNreWFyZCBCYWdlbNoGGQC7ooj5BEW_MbE5M7GyFuO3B_pH_X1mmKmiCBZQZW9wbGUgYWxzbyBzZWFyY2ggZm9yqAgBlQE8pGAAAAA"
+                },
+                {
+                    "name": "Mt. Bagel",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlpZ-qI-znHtA34VFMeS5mKIAPz7hufB59YsPShFW42YjlGJmbrHU&s=0",
+                    "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Mt.+Bagel&stick=H4sIAAAAAAAAAAFbAKT_CDEiDS9nLzExdjB5MHg4M2z6AQCwBACiBQlNdC4gQmFnZWzaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIARo9cftbAAAA&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChCz2gEoAHoECDAQGQ",
+                    "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Mt.+Bagel&safe=active&start=10&stick=H4sIAAAAAAAAAAFbAKT_CDEiDS9nLzExdjB5MHg4M2z6AQCwBACiBQlNdC4gQmFnZWzaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIARo9cftbAAAA"
+                },
+                {
+                    "name": "Bagel Oasis",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWurJzVdbdkuyIU6dWMCYZysJfYBE3_Ws2Zxhw-xvsXK0d3HpDyfE1&s=0",
+                    "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Bagel+Oasis&stick=H4sIAAAAAAAAAAFbAKT_CDEiCy9nLzF3NGY3dDVt-gEAsAQAogULQmFnZWwgT2FzaXPaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIAeoUFMxbAAAA&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChCz2gEoAHoECDAQHg",
+                    "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Bagel+Oasis&safe=active&start=10&stick=H4sIAAAAAAAAAAFbAKT_CDEiCy9nLzF3NGY3dDVt-gEAsAQAogULQmFnZWwgT2FzaXPaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIAeoUFMxbAAAA"
+                },
+                {
+                    "name": "Loxsmith Bagels",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREDBuP5S4k5-pdxzQojSZdLHILQAxuTNjR2YJXsvwzfR18eDXPoKSe&s=0",
+                    "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Loxsmith+Bagels&stick=H4sIAAAAAAAAAAFhAJ7_CDEiDS9nLzExcHp4YjV0MnT6AQCwBACiBQ9Mb3hzbWl0aCBCYWdlbHPaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIARmqe1FhAAAA&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChCz2gEoAHoECDAQIw",
+                    "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Loxsmith+Bagels&safe=active&start=10&stick=H4sIAAAAAAAAAAFhAJ7_CDEiDS9nLzExcHp4YjV0MnT6AQCwBACiBQ9Mb3hzbWl0aCBCYWdlbHPaBhkAu6KI-QRFvzGxOTOxshbjtwf6R_19ZpipoggWUGVvcGxlIGFsc28gc2VhcmNoIGZvcqgIARmqe1FhAAAA"
+                }
+            ]
+        },
+        {
+            "block_position": 1,
+            "query": "fresh bagels near bellevue, wa",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=fresh+bagels+near+bellevue,+wa&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEoQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=fresh+bagels+near+bellevue%2C+wa&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Fresh bagels near me",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Fresh+bagels+near+me&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEUQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+bagels+near+me&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Fresh bagels wholesale",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Fresh+bagels+wholesale&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEMQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+bagels+wholesale&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Blazing bagels",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Blazing+bagels&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEsQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Blazing+bagels&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Fresh bagels online",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Fresh+bagels+online&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEgQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+bagels+online&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Bagels near me",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Bagels+near+me&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEIQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Bagels+near+me&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Best bagels in Seattle",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Best+bagels+in+Seattle&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECDUQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Best+bagels+in+Seattle&safe=active&start=10"
+        },
+        {
+            "block_position": 1,
+            "query": "Seattle Bagel Bakery",
+            "link": "https://www.google.com/search?safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&q=Seattle+Bagel+Bakery&sa=X&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDVAnoECEkQAQ",
+            "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Seattle+Bagel+Bakery&safe=active&start=10"
+        }
+    ],
+    "pagination": {
+        "current": 2,
+        "previous": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=0&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDx0wN6BAgHEAI",
+        "next": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=20&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDw0wN6BAgHEBc",
+        "other_pages": {
+            "1": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=0&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEAQ",
+            "3": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=20&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEAc",
+            "4": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=30&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEAk",
+            "5": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=40&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEAs",
+            "6": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=50&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEA0",
+            "7": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=60&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEA8",
+            "8": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=70&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEBE",
+            "9": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=80&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEBM",
+            "10": "https://www.google.com/search?q=Fresh+Bagels&safe=active&sca_esv=292556bc86c4e054&gl=us&hl=en&ei=QoBiaIytDde_p84PhsaK0AM&start=90&sa=N&ved=2ahUKEwiM1smMkJmOAxXX38kDHQajAjo4ChDy0wN6BAgHEBU"
+        }
+    },
+    "serpapi_pagination": {
+        "current": 2,
+        "previous_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=0",
+        "previous": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=0",
+        "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=20",
+        "next": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=20",
+        "other_pages": {
+            "1": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=0",
+            "3": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=20",
+            "4": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=30",
+            "5": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=40",
+            "6": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=50",
+            "7": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=60",
+            "8": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=70",
+            "9": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=80",
+            "10": "https://serpapi.com/search.json?device=desktop&engine=google&gl=us&google_domain=google.com&hl=en&location=Seattle-Tacoma%2C+WA%2C+Washington%2C+United+States&num=10&q=Fresh+Bagels&safe=active&start=90"
+        }
+    }
+}

@@ -49,3 +49,26 @@ exports.performSearch = async (req, res) => {
     });
   }
 };
+
+
+
+//api req structure
+
+// const { getJson } = require("serpapi");
+
+// getJson({
+//   engine: "google",
+//   q: "Fresh Bagels",
+//   location: "Seattle-Tacoma, WA, Washington, United States",
+//   hl: "en",
+//   gl: "us",
+//   google_domain: "google.com",
+//   num: "10",
+//   start: "10",
+//   safe: "active",
+//   api_key: "4b17fe16c94bb86647506d6d42c25b3e0712daf893eb1897801c50a3f2792e86"
+// }, (json) => {
+//   console.log(json["organic_results"]);
+// });
+
+//https://serpapi.com/search.json?engine=google&q=Fresh+Bagels&location=Seattle-Tacoma,+WA,+Washington,+United+States&hl=en&gl=us&google_domain=google.com&num=10&start=10&safe=active
