@@ -1,45 +1,52 @@
 const Search = require('../models/Search');
-const googleSearchService = require('../services/googleSearch');
+const SearchService = require('../services/googleSearch');
+const { getJson } = require("serpapi");
+require ('dotenv').config()
 
 exports.performSearch = async (req, res) => {
   try {
-    const { query, start = 1, num = 10 } = req.body;
+    const { query} = req.body;
     
     if (!query) {
       return res.status(400).json({ error: 'Search query is required' });
     }
 
+    console.log(`Received query from frontend: "${query}"`);
+
     const startTime = Date.now();
-    const searchResults = await googleSearchService.search(query, start, num);
+    const searchResults = await SearchService.search(query);
     const searchTime = Date.now() - startTime;
 
+    //console.log(`SerpApi URL (conceptual) for query "${query}": https://serpapi.com/search.json?engine=google&q=${encodeURIComponent(query)}&location=Seattle-Tacoma,+WA,+Washington,+United+States&hl=en&gl=us&google_domain=google.com&num=${num}&start=${start}&safe=active`);
+
+    console.log(searchResults)
     // Format results
-    const formattedResults = searchResults.items.map(item => ({
-      title: item.title,
-      link: item.link,
-      snippet: item.snippet,
-      displayLink: item.displayLink
-    }));
+    // const formattedResults = searchResults.items.map(item => ({
+    //   title: item.title,
+    //   link: item.link,
+    //   snippet: item.snippet,
+    //   displayLink: item.displayLink
+    // }));
 
-    // Save to database
-    const searchRecord = new Search({
-      query,
-      results: formattedResults,
-      resultCount: searchResults.searchInformation?.totalResults || 0,
-      searchTime
-    });
+    // // Save to database
+    // const searchRecord = new Search({
+    //   query,
+    //   results: formattedResults,
+    //   resultCount: searchResults.searchInformation?.totalResults || 0,
+    //   searchTime
+    // });
 
-    await searchRecord.save();
+    // await searchRecord.save();
 
-    res.json({
-      success: true,
-      data: {
-        results: formattedResults,
-        searchInformation: searchResults.searchInformation,
-        queries: searchResults.queries,
-        searchTime
-      }
-    });
+    // res.json({
+    //   success: true,
+    //   data: {
+    //     results: formattedResults,
+    //     searchInformation: searchResults.searchInformation,
+    //     queries: searchResults.queries,
+    //     searchTime
+    //   }
+    // });
 
   } catch (error) {
     console.error('Search error:', error);
@@ -66,7 +73,7 @@ exports.performSearch = async (req, res) => {
 //   num: "10",
 //   start: "10",
 //   safe: "active",
-//   api_key: "4b17fe16c94bb86647506d6d42c25b3e0712daf893eb1897801c50a3f2792e86"
+//   api_key: process.env.SERP_API_KEY
 // }, (json) => {
 //   console.log(json["organic_results"]);
 // });
