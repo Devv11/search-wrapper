@@ -1,5 +1,23 @@
+'use client';
+
 import { useState, useCallback } from 'react';
-import { searchAPI } from '../services/api';
+import axios from 'axios';
+
+const API_BASE_URL = 'http://localhost:5000/';
+
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// Renamed to avoid conflict with hook's performSearch function
+async function searchAPI(query) {
+  const response = await api.post('/api/search', { query });
+  console.log('API response:', response.data);
+  return response.data;
+}
 
 export const useSearch = () => {
   const [loading, setLoading] = useState(false);
@@ -7,12 +25,15 @@ export const useSearch = () => {
   const [searchInfo, setSearchInfo] = useState(null);
   const [error, setError] = useState(null);
 
-  const performSearch = useCallback(async (query, start = 1, num = 10) => {
+  const performSearch = useCallback(async (query) => {
     setLoading(true);
     setError(null);
     
     try {
-      const response = await searchAPI.performSearch(query, start, num);
+      // Now calls the correct API function instead of itself
+      const response = await searchAPI(query);
+      console.log('Search response:', response);
+      
       if (response.success) {
         setResults(response.data.results);
         setSearchInfo(response.data.searchInformation);
@@ -38,6 +59,6 @@ export const useSearch = () => {
     searchInfo,
     error,
     performSearch,
-    clearResults
+    clearResults,
   };
 };

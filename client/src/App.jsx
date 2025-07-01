@@ -4,9 +4,13 @@ import HeaderComponent from "./components/HeaderComponent"
 import PaginationComponent from "./components/PaginationComponent"
 import SearchResultsDisplay from "./components/SearchResultsDisplay"
 import SidebarFiltersComponent from "./components/SideBarFiltersComponent"
-import { useSearch } from "./hooks/useSearch";
+import { useSearch } from "./hooks/useSearch"
+
+
+
 
 export default function SearchWrapper() {
+  
   const [searchQuery, setSearchQuery] = useState("")
   const [viewMode, setViewMode] = useState("list")
   //const [isLoading, setIsLoading] = useState(false)
@@ -27,81 +31,13 @@ export default function SearchWrapper() {
   const { loading, results, searchInfo, error, performSearch } = useSearch();
 
   // Mock search results (kept outside for clarity, could be dynamic based on search/filters)
-  const allSearchResults = [
-    {
-      id: 1,
-      title: "Advanced Web Development Techniques",
-      url: "https://example.com/web-dev",
-      description:
-        "Learn modern web development techniques including React, Next.js, and TypeScript. This comprehensive guide covers everything from basic concepts to advanced patterns.",
-      domain: "example.com",
-      timestamp: "2 hours ago",
-      rating: 4.8,
-      tags: ["Web Development", "React", "TypeScript"],
-    },
-    {
-      id: 2,
-      title: "Complete Guide to API Design",
-      url: "https://api-guide.dev/complete",
-      description:
-        "Master API design principles with REST, GraphQL, and modern authentication patterns. Includes real-world examples and best practices.",
-      domain: "api-guide.dev",
-      timestamp: "5 hours ago",
-      rating: 4.9,
-      tags: ["API", "REST", "GraphQL"],
-    },
-    {
-      id: 3,
-      title: "Database Optimization Strategies",
-      url: "https://dboptimize.com/strategies",
-      description:
-        "Improve your database performance with proven optimization techniques. Covers indexing, query optimization, and scaling strategies.",
-      domain: "dboptimize.com",
-      timestamp: "1 day ago",
-      rating: 4.7,
-      tags: ["Database", "Performance", "SQL"],
-    },
-    {
-      id: 4,
-      title: "Cloud Architecture Patterns",
-      url: "https://cloudpatterns.io/architecture",
-      description:
-        "Explore cloud-native architecture patterns for scalable applications. Learn about microservices, serverless, and container orchestration.",
-      domain: "cloudpatterns.io",
-      timestamp: "2 days ago",
-      rating: 4.6,
-      tags: ["Cloud", "Architecture", "Microservices"],
-    },
-    {
-      id: 5,
-      title: "Introduction to Machine Learning",
-      url: "https://ai-academy.org/ml-intro",
-      description:
-        "A beginner-friendly introduction to machine learning concepts, algorithms, and practical applications.",
-      domain: "ai-academy.org",
-      timestamp: "3 days ago",
-      rating: 4.5,
-      tags: ["Machine Learning", "AI", "Algorithms"],
-    },
-    {
-      id: 6,
-      title: "Cybersecurity Fundamentals",
-      url: "https://secure-bytes.com/fundamentals",
-      description:
-        "Understand the basics of cybersecurity, including common threats, protective measures, and best practices for online safety.",
-      domain: "secure-bytes.com",
-      timestamp: "4 days ago",
-      rating: 4.7,
-      tags: ["Cybersecurity", "Security", "Privacy"],
-    },
-  ]
-
+  const allSearchResults =results
   // For demonstration, filter results based on a simple query match
-  const filteredSearchResults = allSearchResults.filter(result =>
-    result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+  // const filteredSearchResults = allSearchResults.filter(result =>
+  //   result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //   result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //   result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  // );
 
   const handleSearch = () => {
     setCurrentPage(1); // Reset to first page on new search
@@ -110,7 +46,7 @@ export default function SearchWrapper() {
     }
   };
 
-  const itemsPerPage = 3;
+  const itemsPerPage = 5;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 

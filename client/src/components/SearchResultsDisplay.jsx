@@ -3,14 +3,15 @@ import ResultCard from "./ResultCard";
 import LoadingCard from "./LoadingCard";
 import {Grid, List} from "lucide-react"
 
-export default function SearchResultsDisplay({ viewMode, setViewMode, isLoading, searchResults }) {
-  const hasResults = searchResults.length > 0;
 
+export default function SearchResultsDisplay({ viewMode, setViewMode, isLoading, searchResults }) {
+  const hasResults = searchResults && searchResults.length > 0;
+  
   return (
     <div className="results-section">
       {/* Results Header */}
       <div className="results-header">
-        <div className="results-info">About 1,240,000 results (0.45 seconds)</div>
+        <div className="results-info">About {searchResults.length} results on this page</div>
         <div className="view-controls">
           <button
             type="button"
@@ -42,7 +43,8 @@ export default function SearchResultsDisplay({ viewMode, setViewMode, isLoading,
         <div className={`results-container ${viewMode === "grid" ? "grid" : ""}`}>
           {hasResults ? (
             searchResults.map((result) => (
-              <ResultCard key={result.id} result={result} />
+              // FIX: Use `result.position` for the key, as `result.id` doesn't exist.
+              <ResultCard key={result.position} result={result} />
             ))
           ) : (
             <div className="no-results">

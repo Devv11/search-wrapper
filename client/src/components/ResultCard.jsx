@@ -1,40 +1,38 @@
 import React from "react"
-import { Calendar, Globe, Star, ExternalLink} from "lucide-react"
+import { Globe, ExternalLink } from "lucide-react"
 
 export default function ResultCard({ result }) {
+  // FIX: Use the correct properties from the API response object.
+  // The API provides `link`, `title`, `snippet`, and `displayed_link`.
+  const { title, link, snippet, displayed_link } = result;
+
   return (
     <div className="result-card">
       <div className="result-header">
         <div className="result-title-section">
           <h3 className="result-title">
-            <a href={result.url} target="_blank" rel="noopener noreferrer">
-              {result.title}
+            {/* FIX: Use `link` for the href attribute instead of `url` */}
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              {title}
             </a>
           </h3>
           <div className="result-meta">
-            <Globe size={12} aria-hidden="true" /> {/* aria-hidden for decorative icons */}
-            <span className="domain">{result.domain}</span>
-            <div className="separator"></div>
-            <Calendar size={12} aria-hidden="true" />
-            <span>{result.timestamp}</span>
-            <div className="separator"></div>
-            <Star size={12} className="star-icon" aria-hidden="true" />
-            <span>{result.rating}</span>
+            <Globe size={12} aria-hidden="true" />
+            {/* FIX: Use `displayed_link` instead of `domain` */}
+            <span className="domain">{displayed_link}</span>
+            
+            {/* REMOVED: Calendar and Star icons because `timestamp` and `rating` data is not available */}
           </div>
         </div>
-        <a href={result.url} target="_blank" rel="noopener noreferrer" className="external-link-btn" aria-label={`Open ${result.title} in new tab`}>
+        <a href={link} target="_blank" rel="noopener noreferrer" className="external-link-btn" aria-label={`Open ${title} in new tab`}>
           <ExternalLink size={16} />
         </a>
       </div>
       <div className="result-content">
-        <p className="result-description">{result.description}</p>
-        <div className="result-tags">
-          {result.tags.map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
-          ))}
-        </div>
+        {/* FIX: Use `snippet` for the description text instead of `description` */}
+        <p className="result-description">{snippet}</p>
+
+        {/* REMOVED: The tags section because `result.tags` does not exist in the API response */}
       </div>
     </div>
   )

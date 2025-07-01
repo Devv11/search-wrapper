@@ -1,81 +1,50 @@
 const Search = require('../models/Search');
 const SearchService = require('../services/googleSearch');
-const { getJson } = require("serpapi");
-require ('dotenv').config()
 
-exports.performSearch = async (req, res) => {
+async function performSearch(req, res) {
   try {
-    const { query} = req.body;
+    const { query, page = 1 } = req.body; // Fix: Remove await for req.body
     
     if (!query) {
-      return res.status(400).json({ error: 'Search query is required' });
+      return res.status(400).json({ 
+        success: false,
+        error: 'Search query is required' 
+      });
     }
 
-    console.log(`Received query from frontend: "${query}"`);
+    console.log(`Received query from frontend: "${query}", page: ${page}`);
 
     const startTime = Date.now();
-    const searchResults = await SearchService.search(query);
-    const searchTime = Date.now() - startTime;
+    
+    // Calculate start parameter for pagination (Google uses 0-based indexing)
+    const start = (page - 1) * 10 + 1;
+    
 
-    //console.log(`SerpApi URL (conceptual) for query "${query}": https://serpapi.com/search.json?engine=google&q=${encodeURIComponent(query)}&location=Seattle-Tacoma,+WA,+Washington,+United+States&hl=en&gl=us&google_domain=google.com&num=${num}&start=${start}&safe=active`);
+    const searchResults = await SearchService.search(query, start, 10);
+    const endTime = Date.now();
+    
+    console.log(`Search completed in ${endTime - startTime}ms`);
 
-    console.log(searchResults)
-    // Format results
-    // const formattedResults = searchResults.items.map(item => ({
-    //   title: item.title,
-    //   link: item.link,
-    //   snippet: item.snippet,
-    //   displayLink: item.displayLink
-    // }));
-
-    // // Save to database
-    // const searchRecord = new Search({
-    //   query,
-    //   results: formattedResults,
-    //   resultCount: searchResults.searchInformation?.totalResults || 0,
-    //   searchTime
-    // });
-
-    // await searchRecord.save();
-
-    // res.json({
-    //   success: true,
-    //   data: {
-    //     results: formattedResults,
-    //     searchInformation: searchResults.searchInformation,
-    //     queries: searchResults.queries,
-    //     searchTime
-    //   }
-    // });
+    return res.status(200).json({
+      success: true,
+      data: {
+        results: searchResults.organic_results,
+        searchInformation: searchResults.search_information,
+        searchParameters: searchResults.search_parameters,
+        query,
+        page,
+        timestamp: new Date().toISOString()
+      }
+    });
 
   } catch (error) {
     console.error('Search error:', error);
-    res.status(500).json({ 
+    return res.status(500).json({ 
+      success: false,
       error: 'Search failed',
       message: error.message 
     });
   }
-};
+}
 
-
-
-//api req structure
-
-// const { getJson } = require("serpapi");
-
-// getJson({
-//   engine: "google",
-//   q: "Fresh Bagels",
-//   location: "Seattle-Tacoma, WA, Washington, United States",
-//   hl: "en",
-//   gl: "us",
-//   google_domain: "google.com",
-//   num: "10",
-//   start: "10",
-//   safe: "active",
-//   api_key: process.env.SERP_API_KEY
-// }, (json) => {
-//   console.log(json["organic_results"]);
-// });
-
-//https://serpapi.com/search.json?engine=google&q=Fresh+Bagels&location=Seattle-Tacoma,+WA,+Washington,+United+States&hl=en&gl=us&google_domain=google.com&num=10&start=10&safe=active
+module.exports = { performSearch };
