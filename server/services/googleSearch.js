@@ -16,12 +16,13 @@ const getSerpJsonPromise = (params) => {
     });
 };
 
-async function search(query, start = 1, num = 10) {
+async function search(query) {
     const apiKey = process.env.SERP_API_KEY;
 
     if (!apiKey) {
         throw new Error("SERP_API_KEY is not defined in environment variables.");
     }
+const start = 1, num = 100
 
     const params = {
         engine: "google",

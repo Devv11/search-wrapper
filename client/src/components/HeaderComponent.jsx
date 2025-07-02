@@ -1,7 +1,19 @@
-import React from "react"
-import {Search} from "lucide-react"
+import React, { useState } from "react"
+import { Search, History } from "lucide-react"
+import SearchInputComponent from "./SearchInputComponent"
+import HistorySidebar from "./HistorySidebar"
 
-export default function HeaderComponent({ searchQuery, setSearchQuery, handleSearch, isLoading }) {
+export default function HeaderComponent({
+  searchQuery,
+  setSearchQuery,
+  handleSearch,
+ 
+  searchHistory = [],
+  handleHistoryClick = () => {},
+  //handleClearHistory = () => {},
+}) {
+  const [showHistory, setShowHistory] = useState(false)
+
   return (
     <div className="header">
       <div className="header-content">
@@ -11,26 +23,28 @@ export default function HeaderComponent({ searchQuery, setSearchQuery, handleSea
           </div>
           <h1 className="app-title">SearchWrapper</h1>
         </div>
-        <div className="search-container">
-          <Search className="search-icon" size={16} />
-          <input
-            type="text"
-            placeholder="Search the web..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            aria-label="Search query input"
+        <SearchInputComponent
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          handleSearch={handleSearch}
+          //isLoading={isLoading}
+        />
+        <button
+          onClick={() => setShowHistory(!showHistory)}
+          className="logo-history"
+          aria-label="Search History"
+        >
+          <History size={18} />
+        </button>
+        
+          <HistorySidebar
+            isOpen={showHistory}
+            onToggle={() => setShowHistory(false)}
+            searchHistory={searchHistory}
+            onHistoryClick={handleHistoryClick}
+            //onClearHistory={handleClearHistory}
           />
-          <button
-            type="submit" // Good practice for search forms
-            onClick={handleSearch}
-            className="search-btn"
-            disabled={isLoading}
-          >
-            {isLoading ? "Searching..." : "Search"}
-          </button>
-        </div>
+        
       </div>
     </div>
   )

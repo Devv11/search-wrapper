@@ -1,8 +1,26 @@
 import React from "react";
-import { ChevronLeft, ChevronRight} from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
-export default function PaginationComponent({ currentPage, setCurrentPage, totalPages = 5 }) { // Added totalPages prop for flexibility
-  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+export default function PaginationComponent({ currentPage, setCurrentPage, totalPages }) {
+  if (totalPages <= 1) return null;
+
+  const getPageNumbers = () => {
+    const pages = [];
+    const showPages = 5;
+
+    let start = Math.max(1, currentPage - Math.floor(showPages / 2));
+    let end = Math.min(totalPages, start + showPages - 1);
+
+    if (end - start + 1 < showPages) {
+      start = Math.max(1, end - showPages + 1);
+    }
+
+    for (let i = start; i <= end; i++) {
+      pages.push(i);
+    }
+
+    return pages;
+  };
 
   return (
     <div className="pagination">
@@ -16,28 +34,55 @@ export default function PaginationComponent({ currentPage, setCurrentPage, total
         <ChevronLeft size={16} />
         Previous
       </button>
-      {pageNumbers.map((page) => (
+
+      {currentPage > 3 && (
+        <>
+          <button
+            type="button"
+            className="pagination-btn page-number"
+            onClick={() => setCurrentPage(1)}
+          >
+            1
+          </button>
+          {currentPage > 4 && <span className="pagination-ellipsis">...</span>}
+        </>
+      )}
+
+      {getPageNumbers().map((page) => (
         <button
           type="button"
           key={page}
           className={`pagination-btn page-number ${currentPage === page ? "active" : ""}`}
           onClick={() => setCurrentPage(page)}
           aria-current={currentPage === page ? "page" : undefined}
-          aria-label={`Page ${page}`}
         >
           {page}
         </button>
       ))}
+
+      {currentPage < totalPages - 2 && (
+        <>
+          {currentPage < totalPages - 3 && <span className="pagination-ellipsis">...</span>}
+          <button
+            type="button"
+            className="pagination-btn page-number"
+            onClick={() => setCurrentPage(totalPages)}
+          >
+            {totalPages}
+          </button>
+        </>
+      )}
+
       <button
         type="button"
         className="pagination-btn"
-        onClick={() => setCurrentPage(prev => prev + 1)}
-        disabled={currentPage === totalPages} // Disable if on last page
+        onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+        disabled={currentPage === totalPages}
         aria-label="Next page"
       >
         Next
         <ChevronRight size={16} />
       </button>
     </div>
-  )
+  );
 }

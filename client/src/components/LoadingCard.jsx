@@ -1,7 +1,7 @@
 import React from "react"
 
 export default function LoadingCard() {
-  return (
+return (
     <div className="result-card loading-card" aria-hidden="true">
       <div className="result-header">
         <div className="result-title-section">
@@ -14,5 +14,6 @@ export default function LoadingCard() {
         <div className="loading-description-2"></div>
       </div>
     </div>
-  )
+  );
+  
 }
