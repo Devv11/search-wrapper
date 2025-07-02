@@ -43,17 +43,18 @@ export default function SearchResultsDisplay({
         </div>
       )}
 
-      <div className={`results-container ${viewMode === "grid" ? "grid" : ""}`}>
-        {isLoading ? (
-          [...Array(3)].map((_, i) => <LoadingCard key={i} />)
-        ) : hasResults ? (
-          searchResults.map((result) => (
-            <ResultCard key={result.position} result={result} />
-          ))
-        ) : (
-          <>
-          </>
-        )}
+      <div className="results-outer">
+        <div className={`results-container ${viewMode === "grid" ? "grid" : ""}`}>
+          {isLoading ? (
+            [...Array(3)].map((_, i) => <LoadingCard key={i} />)
+          ) : hasResults ? (
+            searchResults.map((result) => (
+              <ResultCard key={result.position} result={result} />
+            ))
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </>
   );
